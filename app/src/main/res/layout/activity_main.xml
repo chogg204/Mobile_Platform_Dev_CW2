@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Craig Hogg (S1903729) -->
+
+<!-- MPD XML Starter code Resit 2022-2023 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- Salutation TextView -->
+        <TextView
+            android:id="@+id/salutation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:text="Welcome to Mobile Platform Development"
+            />
+
+        <!-- Start Button to fetch exchange rates -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Click for up to date rates"
+            />
+
+        <!-- SearchView for filtering currency items -->
+        <android.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Currency"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- ToggleButton to switch between popular and all currencies -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <android.widget.ToggleButton
+                android:id="@+id/popularToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Currencies"
+                android:checked="false" />
+
+            <TextView
+                android:id="@+id/popularToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toggle to display popular currencies"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Placeholder for displaying raw data -->
+        <TextView
+            android:id="@+id/rawDataDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:text="All currencies will list here:"
+            android:visibility="visible"
+            />
+
+        <!-- ListView to display exchange rate items -->
+        <!-- Properly constrained ListView -->
+        <ListView
+            android:id="@+id/exchangeRateListView"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_weight="1"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+</ScrollView>
